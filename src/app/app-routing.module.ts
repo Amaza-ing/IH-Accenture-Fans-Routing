@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FanPageComponent } from './components/fan-page/fan-page.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { CharacterProfileComponent } from './components/character-profile/character-profile.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: "characters/:id",
     component: CharacterProfileComponent
+  },
+  {
+    path: "**",
+    component: ErrorPageComponent
   }
 ]
 

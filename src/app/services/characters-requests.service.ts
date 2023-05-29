@@ -17,6 +17,10 @@ export class CharactersRequestsService {
     return this.http.get<CharacterInterface[]>(`${this.API_URL}/characters`);
   }
 
+  getCharacter(id: number): Observable<CharacterInterface[]> {
+    return this.http.get<CharacterInterface[]>(`${this.API_URL}/characters/${id}`);
+  }
+
   postCharacter(body: any): Observable<any> {
     return this.http.post<any>(`${this.API_URL}/characters`, body)
   }

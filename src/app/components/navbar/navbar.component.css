@@ -21,3 +21,7 @@
 .navbar-link:last-child::after {
   content: "";
 }
+
+.active {
+  color: red;
+}

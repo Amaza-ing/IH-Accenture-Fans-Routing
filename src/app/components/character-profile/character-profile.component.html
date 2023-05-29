@@ -1,1 +1,7 @@
-<p>character-profile works!</p>
+<section *ngIf="character">
+  <h2>{{ character.name }}</h2>
+  <h3>Weapon: {{ character.weapon }}</h3>
+  <h3>Occupation: {{ character.occupation }}</h3>
+</section>
+
+<button (click)="goBack()">Go Back to Characters</button>

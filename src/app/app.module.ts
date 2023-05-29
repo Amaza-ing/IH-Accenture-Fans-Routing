@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CharacterProfileComponent } from './components/character-profile/character-profile.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CharacterProfileComponent } from './components/character-profile/charac
     HomeComponent,
     NavbarComponent,
     CharacterProfileComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
