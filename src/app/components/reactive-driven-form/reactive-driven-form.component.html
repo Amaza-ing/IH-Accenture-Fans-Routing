@@ -1,6 +1,6 @@
 <div class="container">
   <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
       <input matInput type="text" placeholder="Name..." formControlName="name" />
       <mat-error class="error-msg" *ngIf="nameInput.invalid && nameInput.touched">
@@ -38,6 +38,8 @@
         Role error.....
       </p>
     </div>
-    <button mat-raised-button color="accent" type="submit" [disabled]="registerForm.invalid">Submit</button>
+    <button mat-raised-button color="primary" type="submit" >Submit</button>
+    <button mat-raised-button color="primary" type="submit" >Submit</button>
+
   </form>
 </div>
