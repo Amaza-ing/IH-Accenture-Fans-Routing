@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { CoursesComponent } from './components/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatInputModule } from '@angular/material/input';
     ErrorPageComponent,
     ReactiveDrivenFormComponent,
     CustomValidatorComponent,
+    CoursesComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,8 @@ export class ReactiveDrivenFormComponent {
   passwordInput: FormControl;
   roleInput: FormControl;
 
+  myName!: string;
+
   constructor() {
     this.roles = ['admin', 'user', 'operator'];
 
@@ -50,5 +52,7 @@ export class ReactiveDrivenFormComponent {
   onSubmit(): void {
     console.log('User created...');
     console.log(this.nameInput.value);
+    this.myName = this.nameInput.value;
+    console.log("myName: ", this.myName);    
   }
 }

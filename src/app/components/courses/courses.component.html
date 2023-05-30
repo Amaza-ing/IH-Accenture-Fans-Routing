@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="courseForm" (submit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Course</mat-label>
+      <input matInput type="text" placeholder="Course..." formControlName="course" />
+      <mat-error class="error-msg" *ngIf="courseInput.invalid && courseInput.touched">
+        Course error.....
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="courseForm.invalid">Submit</button>
+  </form>
+</div>
+
+
+
+<button (click)="getCourses()">Get Courses</button>
+
+<section *ngIf="courses">
+  <ul>
+    <li *ngFor="let course of courses">
+        {{ course.course }} - {{ course.hours }}
+    </li>
+  </ul>
+</section>
+
+<!-- <button (click)="postCourse()">Save Course</button> -->
