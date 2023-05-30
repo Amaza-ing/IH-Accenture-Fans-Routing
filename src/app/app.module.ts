@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FanPageComponent } from './components/fan-page/fan-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FanItemComponent } from './components/fan-item/fan-item.component';
 import { RandomUserService } from './services/random-user.service';
 import { CharactersComponent } from './components/characters/characters.component';
@@ -13,6 +13,12 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CharacterProfileComponent } from './components/character-profile/character-profile.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { ReactiveDrivenFormComponent } from './components/reactive-driven-form/reactive-driven-form.component';
+import { CustomValidatorComponent } from './components/custom-validator/custom-validator.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -24,14 +30,20 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     NavbarComponent,
     CharacterProfileComponent,
     ErrorPageComponent,
+    ReactiveDrivenFormComponent,
+    CustomValidatorComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
   ],
   providers: [RandomUserService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

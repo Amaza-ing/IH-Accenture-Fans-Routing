@@ -6,6 +6,7 @@ import { FanPageComponent } from './components/fan-page/fan-page.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { CharacterProfileComponent } from './components/character-profile/character-profile.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { ReactiveDrivenFormComponent } from './components/reactive-driven-form/reactive-driven-form.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: "characters",
     component: CharactersComponent
+  },
+  {
+    path: "reactive-form",
+    component: ReactiveDrivenFormComponent
   },
   {
     path: "characters/:id",
